@@ -1,25 +1,35 @@
 document.addEventListener("DOMContentLoaded", () => {
   renderPresentaciones();
+  renderProyectos();
   renderProblemas();
 });
 
-function renderPresentaciones() {
-  const contenedor = document.getElementById("lista-presentaciones");
+function renderCards(contenedorId, items, textoEnlace = "Ver en Drive") {
+  const contenedor = document.getElementById(contenedorId);
+  const validos = items.filter(p => p.titulo);
 
-  if (!presentaciones.length) {
-    contenedor.innerHTML = '<p class="vacio">No hay presentaciones disponibles aún.</p>';
+  if (!validos.length) {
+    contenedor.innerHTML = '<p class="vacio">No hay elementos disponibles aún.</p>';
     return;
   }
 
-  contenedor.innerHTML = presentaciones.map(p => `
+  contenedor.innerHTML = validos.map(p => `
     <article class="card">
       <h3 class="card-titulo">${esc(p.titulo)}</h3>
       ${p.descripcion ? `<p class="card-desc">${esc(p.descripcion)}</p>` : ""}
       <a class="card-enlace" href="${esc(p.enlace)}" target="_blank" rel="noopener noreferrer">
-        Ver en Drive
+        ${textoEnlace}
       </a>
     </article>
   `).join("");
+}
+
+function renderPresentaciones() {
+  renderCards("lista-presentaciones", presentaciones);
+}
+
+function renderProyectos() {
+  renderCards("lista-proyectos", proyectos, "Visitar página");
 }
 
 function renderProblemas() {
