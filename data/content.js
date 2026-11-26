@@ -22,47 +22,7 @@ const presentaciones = [
     titulo: "Tutorial GPT4Sales",
     descripcion: "Guía paso a paso para utilizar GPT4Sales.",
     enlace: "https://drive.google.com/drive/folders/1dTNf12Eq6GoADKx4ziMfmgsBhobgc0kt?usp=sharing"
-  },
-  {
-    titulo: "Secuencia de Collatz",
-    descripcion: "",
-    enlace: ""
-  },
-  {
-    titulo: "Secuencia de Collatz",
-    descripcion: "",
-    enlace: ""
-  },
-  {
-    titulo: "",
-    descripcion: "",
-    enlace: ""
-  },
-  {
-    titulo: "",
-    descripcion: "",
-    enlace: ""
-  },
-  {
-    titulo: "",
-    descripcion: "",
-    enlace: ""
-  },
-  {
-    titulo: "",
-    descripcion: "",
-    enlace: ""
-  },
-  {
-    titulo: "",
-    descripcion: "",
-    enlace: ""
-  },
-  {
-    titulo: "",
-    descripcion: "",
-    enlace: ""
-  },
+  }
 ];
 
 
@@ -84,7 +44,7 @@ const proyectos = [
     titulo: "Agentes IA",
     descripcion: "Una página web creada por Claude para aprender sobre agentes de inteligencia artificial con ejercicios interactivos",
     enlace: "https://leonardoperezl.github.io/AgentesIACuestionario/"
-  },
+  }
 ];
 
 
@@ -172,8 +132,8 @@ print("Programa terminado.")`
 `
   },
   {
-    titulo: "Invertir una cadena",
-    enunciado: "Dada una cadena de texto, retornar la cadena invertida sin usar slicing ni la función reversed().",
+    titulo: "Promedios de números pares e impares",
+    enunciado: "Leer N números y calcula los promedios de los pares e impares.",
     solucion:
 `def main():
     # Leer el número de caracteres a ingresar
@@ -181,7 +141,7 @@ print("Programa terminado.")`
         n: int = int(input("Ingrese la cantidad de numeros a ingresar: "))
         
         if n <= 1_000: break
-        else: "Ingrese una cantidad menor o igual a 1,000 por favor." 
+        else: print("Ingrese una cantidad menor o igual a 1,000 por favor.")
     
     # Ingresar los números y guardarlos en el arreglo A
     vA: list[int] = [
@@ -194,12 +154,12 @@ print("Programa terminado.")`
     
     # Imprimir resultados
     print(
-        f"Los valores pares son: {" ".join(map(str, vP))} "
+        f"Los valores pares son: {' '.join(map(str, vP))} "
         f"con un promedio de {sum(vP) / len(vP):.2f}"
     )
-    
+
     print(
-        f"Los valores impares son: {" ".join(map(str, vI))} "
+        f"Los valores impares son: {' '.join(map(str, vI))} "
         f"con un promedio de {sum(vI) / len(vI):.2f}"
     )
 
@@ -254,7 +214,7 @@ def main():
         f"Número de impares: {num_impares}"
     )
     
-    print(f"Datos del tercer vector: {", ".join(map(str, vector_n_m))}")
+    print(f"Datos del tercer vector: {', '.join(map(str, vector_n_m))}")
 
 
 if __name__ == "__main__":
